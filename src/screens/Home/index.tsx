@@ -6,17 +6,7 @@ import { styles } from "./styles";
 
 export function Home() {
   const [participantName, setParticipantName] = useState("");
-  const [participants, setParticipants] = useState([
-    "Rodrigo",
-    "Vini",
-    "Diego",
-    "Biro",
-    "Ana",
-    "Isa",
-    "Jack",
-    "Mayk",
-    "João",
-  ]);
+  const [participants, setParticipants] = useState([] as string[]);
 
   function handleParticipantAdd(name: string) {
     if (participants.includes(name?.trim())) {
@@ -46,7 +36,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.eventName}>Nome do evento</Text>
+      <Text style={styles.eventName}>Formatura</Text>
 
       <Text style={styles.eventDate}>Sexta, 4 de Novembro de 2022.</Text>
 
